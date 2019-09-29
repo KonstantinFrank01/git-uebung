@@ -175,10 +175,31 @@ git merge <branch_name>
 
 ## Pull requests durchführen
 
+Um dein lokales Repository mit den neuesten Änderungen zu aktualisieren
+
+```
+git pull <remote>
+git pull origin
+
+```
+
+dieser Befehl lädt erst die Änderungen herunter (fetch) und führt sie dann mit deinem Stand zusammen (merge).
+
 ## Commits taggen
+
+Du kannst einen neuen Tag namens 1.0.0 mit folgendem Befehl erstellen:
+
+```
+git tag 1.0.0 1b2e1d63ff
+
+```
+
+1b2e1d63ff ist die Commit-ID, diese ID's können sich mit ```git log``` angesehen werden.
 
 ## Einen Release-Eintrag im Github erstellen (inkl. Doku)
 
 ## Verwerfen der lokalen Änderungen
 
 ### Was bedeutet ```stash```
+
+Mit Hilfe von ```git stash```kann eine noch nicht abgeschlossene Änderung, die noch nicht committed werden soll, aus der Staging Area entfernt, aber der Zustand gespeichert werden. Somit kann ohne bedenken in einen anderen Branch gewechselt werden um dort weiterzuarbeiten. Wechselt man später zurück kann man sich mit ``git stash list```alle "gestashten" Zustände ansehen. Mit ```git stash apply````werden die zuletzt getätigten Änderungen wiederhergestellt und es kann normal weitergearbeitet werden.
