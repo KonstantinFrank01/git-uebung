@@ -23,11 +23,62 @@ git clone https://github.com/KonstantinFrank01/git-uebung.git
 
 ### Dateien in die Staging Area einpflegen
 
+Eine bestimmte Datei in die Staging Area einpflegen
+
+```
+git add <file>
+git add README.md
+
+```
+Ein ganzes Verzeichnis in die Staging Area einpflegen
+
+```
+git add <directory>
+git add git-uebung
+
+```
+
+Alle Änderungen in die Staging Area einpflegen
+
+```
+git add .
+
+```
+
 ### Dateien aus der Staging Area entfernen
+
+Eine Datei aus der Staging Area entfernen ohne die Modifizierung rückgängig zu machen.
+
+```
+git reset HEAD <file>
+git reset HEAD README.md
+
+```
 
 ### Dateien in das local-repo einpflegen
 
+```
+git commit -m "commit message"
+
+```
+
 ### Dateien aus dem local-repo entfernen
+
+Die Datei aus dem lokalen Repo entfernen und auch vom File-System löschen.
+
+```
+git rm <file>
+git rm README.md
+
+```
+
+Die Datei aus dem lokalen Repo entfernen und NICHT vom File-System löschen
+
+```
+git rm --cached <file>
+git rm --cached README.md
+
+```
 
 ### Dateien in das remote-repo einpflegen
 
